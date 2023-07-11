@@ -1,25 +1,14 @@
-import { useState } from "react";
-import { Channel as ChannelType } from "stream-chat";
-import {
-  ChannelList,
-  Channel,
-  MessageList,
-  MessageInput,
-} from "stream-chat-expo";
+import { useRouter } from "expo-router";
+import { ChannelList } from "stream-chat-expo";
 
 const ChatScreen = () => {
-  const [channel, setChannel] = useState<ChannelType>();
+  const router = useRouter();
 
-  if (channel) {
-    return (
-      <Channel channel={channel}>
-        <MessageList />
-        <MessageInput />
-      </Channel>
-    );
-  }
-
-  return <ChannelList onSelect={(channel) => setChannel(channel)} />;
+  return (
+    <ChannelList
+      onSelect={(channel) => router.push(`/chat/channel/${channel.id}`)}
+    />
+  );
 };
 
 export default ChatScreen;
