@@ -1,9 +1,9 @@
 import { Text, Pressable } from "react-native";
-import { User, useAuth } from "../context/auth";
+import { useAuth } from "../context/auth";
 import { useChatContext } from "stream-chat-expo";
 import { useRouter } from "expo-router";
 
-const UserListItem = ({ user }: { user: User }) => {
+const UserListItem = ({ user }) => {
   const { client } = useChatContext();
   const { user: me } = useAuth();
   const router = useRouter();

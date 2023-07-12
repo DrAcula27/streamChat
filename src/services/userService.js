@@ -1,8 +1,7 @@
-import { User } from "../context/auth";
 import { API_URL } from "../config";
 import { Alert } from "react-native";
 
-export const login = async (username: string): Promise<User | null> => {
+export const login = async (username) => {
   const res = await fetch(`${API_URL}/login`, {
     method: "POST",
     headers: {
@@ -20,7 +19,7 @@ export const login = async (username: string): Promise<User | null> => {
   }
 };
 
-export const getUsers = async (): Promise<User[]> => {
+export const getUsers = async () => {
   const res = await fetch(`${API_URL}/users`);
   return res.json();
 };

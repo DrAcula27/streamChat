@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
-import { User } from "../../src/context/auth";
 import { getUsers } from "../../src/services/userService";
 import UserListItem from "../../src/components/UserListItem";
 const NewChannel = () => {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     getUsers().then(setUsers);
