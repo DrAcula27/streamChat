@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { getUsers } from "../../src/services/userService";
 import UserListItem from "../../src/components/UserListItem";
-const NewChannel = () => {
+
+const New1on1Channel = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -17,4 +18,4 @@ const NewChannel = () => {
   );
 };
 
-export default NewChannel;
+export default New1on1Channel;

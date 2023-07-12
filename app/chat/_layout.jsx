@@ -44,7 +44,7 @@ export default function ChatLayout() {
             options={{
               title: "Messages",
               headerRight: () => (
-                <Link href="/chat/newChannel">
+                <Link href="/chat/new1on1Channel">
                   <Entypo name="new-message" size={18} color="royalblue" />
                 </Link>
               ),
