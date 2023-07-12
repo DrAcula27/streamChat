@@ -1,10 +1,10 @@
-import { Button, StyleSheet, View } from 'react-native';
-import { useAuth } from '../../src/context/auth';
-import { TextInput } from 'react-native-gesture-handler';
-import { useState } from 'react';
+import { Button, StyleSheet, View } from "react-native";
+import { useAuth } from "../../src/context/auth";
+import { TextInput } from "react-native-gesture-handler";
+import { useState } from "react";
 
 export default function SignIn() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   const { signIn } = useAuth();
 
@@ -15,9 +15,9 @@ export default function SignIn() {
         onChangeText={setUsername}
         placeholder="Username"
         style={styles.input}
-        placeholderTextColor={'lightgray'}
+        placeholderTextColor={"gray"}
       />
-      <Button onPress={() => signIn(username)} title="Sign in" />
+      <Button title="Sign in" onPress={() => signIn(username)} />
     </View>
   );
 }
@@ -25,12 +25,12 @@ export default function SignIn() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     padding: 30,
   },
   input: {
     borderWidth: 0.5,
-    borderColor: 'lightgray',
+    borderColor: "gray",
     padding: 10,
     marginVertical: 10,
     borderRadius: 5,

@@ -1,9 +1,13 @@
 import { useLocalSearchParams } from "expo-router";
 import { useState, useEffect } from "react";
-import { Channel as ChannelType } from "stream-chat";
-import { useChatContext } from "stream-chat-expo";
-import { Channel, MessageList, MessageInput } from "stream-chat-expo";
 import { ActivityIndicator } from "react-native";
+import { Channel as ChannelType } from "stream-chat";
+import {
+  Channel,
+  MessageList,
+  MessageInput,
+  useChatContext,
+} from "stream-chat-expo";
 
 const ChannelScreen = () => {
   const [channel, setChannel] = useState<ChannelType | null>(null);

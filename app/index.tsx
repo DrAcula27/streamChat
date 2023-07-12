@@ -1,18 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Link, Redirect } from "expo-router";
+import { StyleSheet } from "react-native";
+import { Redirect } from "expo-router";
 
 export default function Page() {
   return <Redirect href={"/chat"} />;
   // return (
   //   <View style={styles.container}>
   //     <View style={styles.main}>
-  //       <Text style={styles.title}>Welcome to M...</Text>
-  //       <Text style={styles.subtitle}>
-  //         <Link style={styles.link} href="/chat">
-  //           Chat &nbsp;
-  //         </Link>
-  //         with your mentor
-  //       </Text>
+  //       <Text style={styles.title}>Hello World</Text>
+  //       <Link href={"/chat"} style={styles.subtitle}>Open Chat</Link>
   //     </View>
   //   </View>
   // );
@@ -37,9 +32,5 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 36,
     color: "#38434D",
-  },
-  link: {
-    fontSize: 36,
-    color: "blue",
   },
 });
